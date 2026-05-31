@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — James [Surname]</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="index.html">James [Surname]</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html" class="active">CV</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <h1 style="margin-bottom: 0.15rem;">Curriculum Vitae</h1>
+  <p style="font-family: var(--serif); font-style: italic; color: var(--ink-light); font-size: 0.9rem; margin-bottom: 2.5rem;">
+    Updated [Month Year]
+  </p>
+
+  <!-- Education -->
+  <section class="cv-section">
+    <span class="label">Education</span>
+    <div class="cv-entry">
+      <div class="cv-year">20XX</div>
+      <div class="cv-detail">
+        <strong>PhD, Theological Studies</strong>
+        <span class="institution">University of St Andrews</span>
+      </div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-year">20XX</div>
+      <div class="cv-detail">
+        <strong>Degree, Field</strong>
+        <span class="institution">Institution</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" style="margin: 1.5rem 0;">
+
+  <!-- Positions -->
+  <section class="cv-section">
+    <span class="label">Academic positions</span>
+    <div class="cv-entry">
+      <div class="cv-year">20XX–</div>
+      <div class="cv-detail">
+        <strong>Registrar</strong>
+        <span class="institution">Regent College, Vancouver</span>
+      </div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-year">20XX–</div>
+      <div class="cv-detail">
+        <strong>Adjunct Faculty</strong>
+        <span class="institution">Regent College, Vancouver</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" style="margin: 1.5rem 0;">
+
+  <!-- Research -->
+  <section class="cv-section">
+    <span class="label">Research interests</span>
+    <p style="font-size: 0.95rem; color: var(--ink-mid); font-family: var(--serif);">
+      Describe your main research areas here — a sentence or two per cluster is enough.
+      For example: theology and literature, creation theology, <em>imago dei</em>,
+      early Christian studies, academic administration.
+    </p>
+  </section>
+
+  <hr class="rule" style="margin: 1.5rem 0;">
+
+  <!-- Teaching -->
+  <section class="cv-section">
+    <span class="label">Teaching</span>
+    <div class="cv-entry">
+      <div class="cv-year">20XX</div>
+      <div class="cv-detail">
+        <strong>Course Title</strong>
+        <span class="institution">Regent College</span>
+      </div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-year">20XX</div>
+      <div class="cv-detail">
+        <strong>Course Title</strong>
+        <span class="institution">Regent College</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" style="margin: 1.5rem 0;">
+
+  <!-- Service -->
+  <section class="cv-section">
+    <span class="label">Service &amp; administration</span>
+    <div class="cv-entry">
+      <div class="cv-year">20XX–</div>
+      <div class="cv-detail">
+        <strong>Role or committee</strong>
+        <span class="institution">Institution</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" style="margin: 1.5rem 0;">
+
+  <!-- Download -->
+  <a class="cv-download" href="cv.pdf" download>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Download full CV (PDF)
+  </a>
+
+</main>
+
+<footer>
+  &copy; <span id="year"></span> James [Surname]
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

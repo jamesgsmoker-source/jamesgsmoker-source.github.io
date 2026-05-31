@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>James [Surname]</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="index.html">James [Surname]</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="hero">
+    <h1>James [Surname]</h1>
+    <p class="hero-role">Registrar &amp; Adjunct Faculty, Regent College, Vancouver</p>
+    <p class="hero-bio">
+      Short bio paragraph here — introduce your research interests, institutional home,
+      and the animating questions of your work. Two or three sentences is enough.
+      Visitors will read this first, so make it count.
+    </p>
+    <p class="hero-bio" style="margin-top: 1rem;">
+      A second paragraph can mention your dissertation monograph, current projects,
+      or teaching areas. Keep it personal and direct.
+    </p>
+  </div>
+
+  <section>
+    <span class="label">Recent writing</span>
+    <div id="recent-posts">
+      <p class="blog-empty">No posts yet.</p>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <span class="label">Contact</span>
+    <p style="font-family: var(--serif); font-size: 0.95rem; color: var(--ink-mid);">
+      You can reach me at
+      <a href="mailto:your@email.com">your@email.com</a>
+      or find me at
+      <a href="https://regent-college.edu" target="_blank" rel="noopener">Regent College</a>.
+    </p>
+  </section>
+</main>
+
+<footer>
+  &copy; <span id="year"></span> James [Surname]
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+fetch('posts.json')
+  .then(r => r.json())
+  .then(posts => {
+    const container = document.getElementById('recent-posts');
+    if (!posts.length) return;
+    const recent = posts.slice(0, 3);
+    container.innerHTML = recent.map(p => `
+      <a class="blog-item" href="${p.file}">
+        <div class="blog-item-title">${p.title}</div>
+        <div class="blog-item-meta">${formatDate(p.date)}${p.category ? ' &middot; ' + p.category : ''}</div>
+      </a>
+    `).join('');
+  })
+  .catch(() => {});
+
+function formatDate(str) {
+  const d = new Date(str + 'T00:00:00');
+  return d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long' });
+}
+</script>
+
+</body>
+</html>

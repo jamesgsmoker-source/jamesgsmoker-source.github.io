@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — James [Surname]</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="index.html">James [Surname]</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <h1 style="margin-bottom: 0.25rem;">Blog</h1>
+  <p style="font-family: var(--serif); font-style: italic; color: var(--ink-light); font-size: 0.95rem; margin-bottom: 2.5rem;">
+    Writing on theology, literature, and academic life.
+  </p>
+
+  <div id="post-list">
+    <p class="blog-empty">Loading posts&hellip;</p>
+  </div>
+</main>
+
+<footer>
+  &copy; <span id="year"></span> James [Surname]
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+fetch('posts.json')
+  .then(r => r.json())
+  .then(posts => {
+    const container = document.getElementById('post-list');
+    if (!posts.length) {
+      container.innerHTML = '<p class="blog-empty">No posts yet.</p>';
+      return;
+    }
+    // Sort newest first
+    posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+    container.innerHTML = posts.map(p => `
+      <a class="blog-item" href="${p.file}">
+        <div class="blog-item-title">${p.title}</div>
+        <div class="blog-item-meta">${formatDate(p.date)}${p.category ? ' &middot; ' + p.category : ''}</div>
+      </a>
+    `).join('');
+  })
+  .catch(() => {
+    document.getElementById('post-list').innerHTML =
+      '<p class="blog-empty">No posts yet.</p>';
+  });
+
+function formatDate(str) {
+  const d = new Date(str + 'T00:00:00');
+  return d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long' });
+}
+</script>
+
+</body>
+</html>

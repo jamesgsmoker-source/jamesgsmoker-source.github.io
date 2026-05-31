@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example post title — James [Surname]</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="../index.html">James [Surname]</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <a class="back-link" href="../blog.html">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+    All posts
+  </a>
+
+  <div class="post-header">
+    <h1 class="post-title">Example post title</h1>
+    <div class="post-meta">30 May 2026 &middot; Theology</div>
+  </div>
+
+  <div class="post-body">
+    <p>
+      This is the opening paragraph of your post. Write freely here —
+      the stylesheet handles all the typography. Paragraphs, headings,
+      and blockquotes are all styled.
+    </p>
+
+    <h2>A section heading</h2>
+
+    <p>
+      Another paragraph. You can use <em>italics</em> and <strong>bold</strong>
+      as usual. Internal links work normally.
+    </p>
+
+    <blockquote>
+      A block quotation sits here, indented and italicised, with a left rule.
+      Useful for primary sources or epigraphs.
+    </blockquote>
+
+    <p>
+      Closing paragraph. To add a new post, duplicate this file into the
+      <code>posts/</code> folder and add an entry to <code>posts.json</code>.
+    </p>
+  </div>
+</main>
+
+<footer>
+  &copy; <span id="year"></span> James [Surname]
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
