@@ -40,13 +40,13 @@
           On this site you will find more information about my writing and teaching, 
 		  including my upcoming monograph <i>Approaching the Divine with Samuel Taylor 
 		  Coleridge</i>. My regular job is as the Registrar at Regent College in 
-		  Vancouver, Canada, where I also do occasioanl teaching. I currently live in
+		  Vancouver, Canada, where I also do occasional teaching. I currently live in
 		  Vancouver with my wife and three children.
         </p>
       </div>
       <div class="hero-photo-wrap">
         <!-- Replace headshot.jpg with your actual photo filename -->
-        <img src="headshot.jpg" alt="Photo of James Smoker" class="hero-photo">
+        <img src="headshot.JPG" alt="Photo of James Smoker" class="hero-photo">
       </div>
     </div>
   </div>
@@ -82,7 +82,7 @@
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
-fetch('posts.json')
+fetch('posts.json?v=' + Date.now())
   .then(r => r.json())
   .then(posts => {
     const container = document.getElementById('recent-posts');

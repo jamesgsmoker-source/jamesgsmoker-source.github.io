@@ -39,7 +39,7 @@
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
-fetch('posts.json')
+fetch('posts.json?v=' + Date.now())
   .then(r => r.json())
   .then(posts => {
     const container = document.getElementById('post-list');
