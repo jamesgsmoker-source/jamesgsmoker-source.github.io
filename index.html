@@ -91,7 +91,7 @@ fetch('posts.json?v=' + Date.now())
     container.innerHTML = recent.map(p => `
       <a class="blog-item" href="${p.file}">
         <div class="blog-item-title">${p.title}</div>
-        <div class="blog-item-meta">${formatDate(p.date)}${p.category ? ' &middot; ' + p.category : ''}</div>
+        <div class="blog-item-meta">${formatDate(p.date)}${p.category ? ' · ' + p.category : ''}</div>
       </a>
     `).join('');
   })
@@ -103,8 +103,8 @@ function formatDate(str) {
 }
 
 const user = 'jamesgsmoker', domain = 'gmail.com';
-const el = document.querySelector('.email-link');
-if (el) { el.href = 'mailto:' + user + '@' + domain; el.textContent = user + '@' + domain; }
+const emailLink = document.querySelector('.email-link');
+if (emailLink) { emailLink.href = 'mailto:' + user + '@' + domain; emailLink.textContent = user + '@' + domain; }
 </script>
 
 </body>
