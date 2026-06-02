@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>James [Surname]</title>
+  <title>James Smoker</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <a class="nav-name" href="index.html">James [Surname]</a>
+    <a class="nav-name" href="index.html">James Smoker</a>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="cv.html">CV</a></li>
@@ -23,17 +23,32 @@
 
 <main>
   <div class="hero">
-    <h1>James [Surname]</h1>
-    <p class="hero-role">Registrar &amp; Adjunct Faculty, Regent College, Vancouver</p>
-    <p class="hero-bio">
-      Short bio paragraph here — introduce your research interests, institutional home,
-      and the animating questions of your work. Two or three sentences is enough.
-      Visitors will read this first, so make it count.
-    </p>
-    <p class="hero-bio" style="margin-top: 1rem;">
-      A second paragraph can mention your dissertation monograph, current projects,
-      or teaching areas. Keep it personal and direct.
-    </p>
+    <div class="hero-top">
+      <div class="hero-text">
+        <h1>James Smoker</h1>
+        <p class="hero-role">Writer and Teacher in Theology and the Arts</p>
+        <p class="hero-bio">
+          Welcome! I am an academic and writer who earned a PhD at the University
+		  of St. Andrews in Scotland. My research focused on the poet and theologian 
+		  Samuel Taylor Coleridge (1772-1834). He had an incredibly interdisciplinary
+		  mind, which has led my own work down all sorts of trails: from the theological
+		  basis for the imagination, to the meeting of science and religion, to the 
+		  need of recognizing the inherent relationality of human nature, to the ways
+		  one can find God in both the light of faith and shadows of doubt.
+        </p>
+        <p class="hero-bio" style="margin-top: 1rem;">
+          On this site you will find more information about my writing and teaching, 
+		  including my upcoming monograph <i>Approaching the Divine with Samuel Taylor 
+		  Coleridge</i>. My regular job is as the Registrar at Regent College in 
+		  Vancouver, Canada, where I also do occasioanl teaching. I currently live in
+		  Vancouver with my wife and three children.
+        </p>
+      </div>
+      <div class="hero-photo-wrap">
+        <!-- Replace headshot.jpg with your actual photo filename -->
+        <img src="headshot.jpg" alt="Photo of James Smoker" class="hero-photo">
+      </div>
+    </div>
   </div>
 
   <section>
@@ -49,15 +64,19 @@
     <span class="label">Contact</span>
     <p style="font-family: var(--serif); font-size: 0.95rem; color: var(--ink-mid);">
       You can reach me at
-      <a href="mailto:your@email.com">your@email.com</a>
-      or find me at
-      <a href="https://regent-college.edu" target="_blank" rel="noopener">Regent College</a>.
+<a href="#" class="email-link"></a>
+<script>
+  const u = 'jamesgsmoker', d = 'gmail.com';
+  const el = document.querySelector('.email-link');
+  el.href = 'mailto:' + u + '@' + d;
+  el.textContent = u + '@' + d;
+</script>
     </p>
   </section>
 </main>
 
 <footer>
-  &copy; <span id="year"></span> James [Surname]
+  &copy; <span id="year"></span> James Smoker
 </footer>
 
 <script>
@@ -82,6 +101,9 @@ function formatDate(str) {
   const d = new Date(str + 'T00:00:00');
   return d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long' });
 }
+const u = 'jamesgsmoker', d = 'gmail.com';
+const el = document.querySelector('.email-link');
+if (el) { el.href = 'mailto:' + u + '@' + d; el.textContent = u + '@' + d; }
 </script>
 
 </body>

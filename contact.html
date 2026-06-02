@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — James [Surname]</title>
+  <title>Contact — James Smoker</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <a class="nav-name" href="index.html">James [Surname]</a>
+    <a class="nav-name" href="index.html">James Smoker</a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="cv.html">CV</a></li>
@@ -24,17 +24,20 @@
 <main>
   <h1 style="margin-bottom: 0.25rem;">Contact</h1>
   <p style="font-family: var(--serif); font-style: italic; color: var(--ink-light); font-size: 0.95rem; margin-bottom: 2.5rem;">
-    I welcome correspondence about research, teaching, and academic matters.
+    I welcome correspondence about my research, teaching, and writing.
   </p>
 
   <!-- Email -->
   <section style="margin-bottom: 2.5rem;">
     <span class="label">Email</span>
     <p style="font-family: var(--serif); font-size: 1rem; color: var(--ink-mid);">
-      <a href="mailto:your@email.com">your@email.com</a>
-    </p>
-    <p style="font-family: var(--serif); font-size: 0.9rem; color: var(--ink-light); margin-top: 0.5rem;">
-      Regent College, 5800 University Boulevard, Vancouver, BC V6T 2E4
+     <a href="#" class="email-link"></a>
+<script>
+  const u = 'jamesgsmoker', d = 'gmail.com';
+  const el = document.querySelector('.email-link');
+  el.href = 'mailto:' + u + '@' + d;
+  el.textContent = u + '@' + d;
+</script>
     </p>
   </section>
 
@@ -47,19 +50,19 @@
 
       <!-- Academia.edu — uncomment and fill in URL to use -->
       <li class="social-item">
-        <a href="https://independent.academia.edu/YourName" target="_blank" rel="noopener" class="social-link">
+        <a href="https://regent-college.academia.edu/JamesSmoker" target="_blank" rel="noopener" class="social-link">
           <span class="social-icon" aria-hidden="true">
             <!-- Academia.edu wordmark A -->
             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 19.5h4.5l1.5-3.5h8l1.5 3.5H22L12 2zm0 4.5l3 7H9l3-7z"/></svg>
           </span>
           <span class="social-label">Academia.edu</span>
-          <span class="social-handle">YourName</span>
+          <span class="social-handle">James Smoker</span>
         </a>
       </li>
 
       <!-- Google Scholar -->
       <li class="social-item">
-        <a href="https://scholar.google.com/citations?user=YOURID" target="_blank" rel="noopener" class="social-link">
+        <a href="https://scholar.google.com/citations?user=VgsyK78AAAAJ&hl=en" target="_blank" rel="noopener" class="social-link">
           <span class="social-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0L0 8l4.5 3.27V18c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2v-6.73L22 8 12 0zm5.5 18h-11v-5.5l5.5-4 5.5 4V18z"/></svg>
           </span>
@@ -70,66 +73,33 @@
 
       <!-- ORCID -->
       <li class="social-item">
-        <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener" class="social-link">
+        <a href="https://orcid.org/0009-0003-1265-1871" target="_blank" rel="noopener" class="social-link">
           <span class="social-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zM7.5 17H6V7h1.5v10zm-0.75-11.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM18 17h-1.5v-5.25c0-1.52-.54-2.25-1.63-2.25-1.2 0-1.87.82-1.87 2.25V17H11.5V7H13v1.1c.5-.78 1.3-1.35 2.38-1.35C17.06 6.75 18 8.02 18 10.2V17z"/></svg>
           </span>
           <span class="social-label">ORCID</span>
-          <span class="social-handle">0000-0000-0000-0000</span>
-        </a>
-      </li>
-
-      <!-- PhilPeople — useful for theology/philosophy adjacent work -->
-      <li class="social-item">
-        <a href="https://philpeople.org/profiles/your-name" target="_blank" rel="noopener" class="social-link">
-          <span class="social-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/></svg>
-          </span>
-          <span class="social-label">PhilPeople</span>
-          <span class="social-handle">Your Name</span>
+          <span class="social-handle">0009-0003-1265-1871</span>
         </a>
       </li>
 
       <!-- LinkedIn — remove if not relevant -->
       <li class="social-item">
-        <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener" class="social-link">
+        <a href="https://linkedin.com/in/james-smoker-7b85a632b/" target="_blank" rel="noopener" class="social-link">
           <span class="social-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.27V1.73C24 .77 23.2 0 22.22 0z"/></svg>
           </span>
           <span class="social-label">LinkedIn</span>
-          <span class="social-handle">yourhandle</span>
-        </a>
-      </li>
-
-      <!-- Bluesky — remove if not relevant -->
-      <li class="social-item">
-        <a href="https://bsky.app/profile/yourhandle.bsky.social" target="_blank" rel="noopener" class="social-link">
-          <span class="social-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.5c-5.52 0-10 4.03-10 9 0 2.83 1.4 5.35 3.6 7.02-.15.7-.5 1.78-1.1 2.48 1.3-.1 2.8-.6 3.9-1.3A10.8 10.8 0 0 0 12 20.5c5.52 0 10-4.03 10-9s-4.48-9-10-9z"/></svg>
-          </span>
-          <span class="social-label">Bluesky</span>
-          <span class="social-handle">@yourhandle.bsky.social</span>
+          <span class="social-handle">James Smoker</span>
         </a>
       </li>
 
     </ul>
   </section>
 
-  <hr class="rule">
-
-  <section>
-    <span class="label">Note</span>
-    <p style="font-family: var(--serif); font-size: 0.9rem; color: var(--ink-light); max-width: 480px;">
-      I try to respond to all academic correspondence within a week.
-      For matters related to Regent College admissions or administration,
-      please contact the college directly via
-      <a href="https://regent-college.edu" target="_blank" rel="noopener">regent-college.edu</a>.
-    </p>
-  </section>
 </main>
 
 <footer>
-  &copy; <span id="year"></span> James [Surname]
+  &copy; <span id="year"></span> James Smoker
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
