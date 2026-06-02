@@ -98,12 +98,13 @@ fetch('posts.json?v=' + Date.now())
   .catch(() => {});
 
 function formatDate(str) {
-  const d = new Date(str + 'T00:00:00');
-  return d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long' });
+  const date = new Date(str + 'T00:00:00');
+  return date.toLocaleDateString('en-GB', { year: 'numeric', month: 'long' });
 }
-const u = 'jamesgsmoker', d = 'gmail.com';
+
+const user = 'jamesgsmoker', domain = 'gmail.com';
 const el = document.querySelector('.email-link');
-if (el) { el.href = 'mailto:' + u + '@' + d; el.textContent = u + '@' + d; }
+if (el) { el.href = 'mailto:' + user + '@' + domain; el.textContent = user + '@' + domain; }
 </script>
 
 </body>
